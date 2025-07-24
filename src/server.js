@@ -31,6 +31,7 @@ const app = express();
 const userRoutes  = require('./User/auth/auth.route');
 const categoryRoutes = require('./gift-cards/category/category.route');
 const itemsRoutes = require('./gift-cards/items/items.route');
+const reviewsRoutes = require('./gift-cards/user-reviews/user-reviews.route');
 
 //app.use(audit())
 // app.use((req, res, next)=>{
@@ -47,6 +48,7 @@ connectToMongodb();
 app.use('/api', userRoutes);
 app.use('/api', categoryRoutes);
 app.use('/api', itemsRoutes);
+app.use('/api', reviewsRoutes);
 
 startServer(app);
 

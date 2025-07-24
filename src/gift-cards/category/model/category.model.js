@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const categorySchema = new Schema({
   name: { type: String, default: null },
   slug: { type: String, default: null },
-  description:{type: String, default: null },
+  category_description:{type: String, default: null },
   parent_id: { type: Schema.Types.ObjectId, ref: 'Category', default: null }, // Self-referencing
   level: { type: Number, default: 1 },
   created_by: { type: Schema.Types.ObjectId, ref: 'Users', required: true },

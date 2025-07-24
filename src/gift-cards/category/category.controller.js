@@ -10,7 +10,7 @@ exports.saveACategory = async (req, res) => {
 
        const newCategory = await categoryRepositoryStorage.save({
             name: categoryName,
-            // description: categoryDescription,
+            category_description: categoryDescription,
             parent_id,
             slug,
             created_by: req.user.userId,
